@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;imgs/background2.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
+   <children>
+      <Pane layoutX="320.0" layoutY="100.0" prefHeight="611.0" prefWidth="622.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="67.0" prefHeight="37.0" prefWidth="101.0" text="Name">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="U_Fname" focusColor="#09b6bc" layoutX="95.0" layoutY="95.0" maxWidth="386.0" minWidth="156.0" prefHeight="48.0" prefWidth="210.0" promptText="First" />
+            <JFXTextField id="U_Lname" fx:id="U_Lname" focusColor="#09b6bc" layoutX="349.0" layoutY="95.0" maxWidth="386.0" minWidth="146.0" prefHeight="48.0" prefWidth="210.0" promptText="Last" />
+            <Label alignment="CENTER" layoutX="61.0" layoutY="143.0" prefHeight="36.0" prefWidth="66.0" text="Email ID">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="U_email" focusColor="#09b6bc" layoutX="92.0" layoutY="179.0" maxWidth="469.0" minWidth="261.0" prefHeight="37.0" prefWidth="469.0" promptText="EmailID" />
+            <Label alignment="CENTER" layoutX="61.0" layoutY="213.0" prefHeight="36.0" prefWidth="66.0" text="Password">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="U_pass" focusColor="#09b6bc" layoutX="92.0" layoutY="243.0" maxWidth="469.0" minWidth="411.0" prefHeight="37.0" prefWidth="469.0" promptText="Password" />
+            <Label alignment="CENTER" layoutX="31.0" layoutY="280.0" prefHeight="36.0" prefWidth="129.0" text="Confirm Password">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="U_conpass" focusColor="#09b6bc" layoutX="92.0" layoutY="318.0" maxWidth="469.0" minWidth="411.0" prefHeight="37.0" prefWidth="469.0" promptText="Confirm Password" />
+            <Label alignment="CENTER" layoutX="29.0" layoutY="356.0" prefHeight="36.0" prefWidth="129.0" text="Address">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="U_address" focusColor="#09b6bc" layoutX="89.0" layoutY="392.0" maxWidth="469.0" minWidth="411.0" prefHeight="78.0" prefWidth="469.0" promptText="Address" />
+            <JFXButton buttonType="RAISED" layoutX="243.0" layoutY="533.0" onAction="#SignUp" prefHeight="67.0" prefWidth="168.0" ripplerFill="WHITE" style="-fx-background-color: #2196f3;" text="Sign Up Now">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="171.0" layoutY="21.0" prefHeight="55.0" prefWidth="312.0" text="Create an account !" textFill="#09b6bc">
+               <font>
+                  <Font name="Gill Sans MT" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="61.0" layoutY="41.0" onAction="#goBack" prefHeight="59.0" prefWidth="145.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="Home" />
+   </children>
+</AnchorPane>

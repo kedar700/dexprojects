@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;imgs/background2.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderDetailsController">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="760.0" prefWidth="1160.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER" layoutX="392.0" layoutY="15.0" prefHeight="69.0" prefWidth="376.0" text="Select a Movie" textFill="#09b6bc">
+               <font>
+                  <Font name="Gill Sans MT" size="45.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="946.0" layoutY="20.0" onAction="#Logout" prefHeight="59.0" prefWidth="145.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="Logout" />
+            <TableView fx:id="tblview" layoutX="14.0" layoutY="113.0" prefHeight="410.0" prefWidth="1132.0">
+              <columns>
+                <TableColumn fx:id="mv_name" prefWidth="122.0" text="Movie  Name" />
+                <TableColumn fx:id="mv_date" prefWidth="133.0" text="Show Date" />
+                  <TableColumn fx:id="mv_time" prefWidth="133.0" text="Show Time" />
+                  <TableColumn fx:id="mv_venue" prefWidth="137.0" text="Show Venue" />
+                  <TableColumn fx:id="mv_seats" prefWidth="167.0" text="Number of Tickets" />
+                  <TableColumn fx:id="mv_cost" prefWidth="142.0" text="Show Cost" />
+                  <TableColumn fx:id="order_id" prefWidth="139.0" text="Order ID" />
+                  <TableColumn fx:id="show_id" prefWidth="159.0" text="Show ID" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="loadDetaisl" buttonType="RAISED" layoutX="23.0" layoutY="559.0" onAction="#Load" prefHeight="59.0" prefWidth="202.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="Load Details" />
+            <JFXButton fx:id="deleteOrd" buttonType="RAISED" layoutX="677.0" layoutY="559.0" onAction="#deleteOrd" prefHeight="59.0" prefWidth="202.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="Delete Order" />
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="45.0" layoutY="30.0" onAction="#goHome" prefHeight="59.0" prefWidth="145.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="goHome" />
+   </children>
+</AnchorPane>

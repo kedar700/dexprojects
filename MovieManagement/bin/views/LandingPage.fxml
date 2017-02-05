@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;imgs/background2.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LandingPageController">
+   <children>
+      <Pane layoutX="153.0" layoutY="38.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;imgs/background2.jpg&quot;); -fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="user_login" buttonType="RAISED" layoutX="195.0" layoutY="360.0" onAction="#user_login" prefHeight="116.0" prefWidth="270.0" style="-fx-background-color: #2196f3;" text="User Login " />
+            <Label alignment="CENTER" layoutX="330.0" layoutY="6.0" prefHeight="116.0" prefWidth="541.0" text="Welcome to the world of Cinema" textFill="#ba2709">
+               <font>
+                  <Font name="Bookman Old Style" size="32.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="admin_login" buttonType="RAISED" layoutX="736.0" layoutY="360.0" onAction="#admin_login" prefHeight="116.0" prefWidth="270.0" style="-fx-background-color: #2196f3;" text="Admin Login " />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
