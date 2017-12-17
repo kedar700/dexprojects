@@ -1,0 +1,13 @@
+
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --table smalllog --m 1
+
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --table largelog --m 1
+
+small log highest per day
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --query 'select date2 as Month, URL, count(URL) as urlcount from smalllog where $CONDITIONS group by Month;' --m 1 --target-dir /user/$USER/output/sqoop/f1
+small log highest per month
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --query 'select date1 as Month, URL, count(URL) as urlcount from smalllog where $CONDITIONS group by Month;' --m 1 --target-dir /user/$USER/output/sqoop/f2
+large log highest per day
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --query 'select date1 as Month, URL, count(URL) as urlcount from largelog where $CONDITIONS group by Month;' --m 1 --target-dir /user/$USER/output/sqoop/f3
+large log highest per month
+sqoop import --connect jdbc:mysql://127.0.0.1/weblog --username root --password safestsystemever --query 'select date2 as Month, URL, count(URL) as urlcount from largelog where $CONDITIONS group by Month;' --m 1 --target-dir /user/$USER/output/sqoop/f4

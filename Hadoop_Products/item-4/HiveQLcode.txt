@@ -1,0 +1,31 @@
+Hive
+
+select obj.perday , max(obj.link), max(obj.cnt) as max from
+((select date1 as perday, count(URL) as cnt, URL as link from smalllog where URL!="/index.*" group by date1, URL order by perday)obj)
+group by obj.perday;
+
+select obj.permonth , max(obj.link), max(obj.cnt) as max from
+((select date2 as permonth, count(URL) as cnt, URL as link from smalllog where URL!="/index.*" group by date2, URL order by permonth)obj)
+group by obj.permonth;
+
+select obj.perday , max(obj.link), max(obj.cnt) as max from
+((select date1 as perday, count(URL) as cnt, URL as link from largelog where URL!="/index.*" group by date1, URL order by perday)obj)
+group by obj.perday;
+
+select obj.permonth , max(obj.link), max(obj.cnt) as max from
+((select date2 as permonth, count(URL) as cnt, URL as link from largelog where URL!="/index.*" group by date2, URL order by permonth)obj)
+group by obj.permonth;
+
+
+
+
+CREATE TABLE smalllog(idlog INT, date1 String,
+date2 String, URL STRING, method STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE largelog(idlog INT, date1 String,
+date2 String, URL STRING, method STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+
+ 
