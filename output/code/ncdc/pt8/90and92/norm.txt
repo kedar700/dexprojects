@@ -1,8 +1,0 @@
-17/03/19 11:16:15 INFO client.RMProxy: Connecting to ResourceManager at euca-192-168-166-50.eucalyptus.internal/192.168.166.50:8032
-17/03/19 11:16:16 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
-17/03/19 11:16:17 INFO input.FileInputFormat: Total input paths to process : 1
-17/03/19 11:16:17 INFO mapreduce.JobSubmitter: number of splits:66
-17/03/19 11:16:18 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1488988448355_2721
-17/03/19 11:16:18 INFO impl.YarnClientImpl: Submitted application application_1488988448355_2721
-17/03/19 11:16:18 INFO mapreduce.Job: The url to track the job: http://euca-192-168-166-50.eucalyptus.internal:8088/proxy/application_1488988448355_2721/
-17/03/19 11:16:18 INFO mapreduce.Job: Running job: job_1488988448355_2721
