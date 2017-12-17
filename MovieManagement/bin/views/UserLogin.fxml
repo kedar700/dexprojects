@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane_Login" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;imgs/background2.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserLoginController">
+   <children>
+      <Pane layoutX="300.0" layoutY="150.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTextField fx:id="user_field" focusColor="#09b6bc" layoutX="124.0" layoutY="92.0" maxWidth="374.0" minWidth="237.0" prefHeight="56.0" prefWidth="374.0" promptText="Username" />
+            <JFXPasswordField fx:id="user_pass" focusColor="#09b6bc" layoutX="125.0" layoutY="160.0" maxWidth="374.0" minWidth="237.0" prefHeight="56.0" prefWidth="374.0" promptText="Password" />
+            <JFXButton fx:id="user_login" buttonType="RAISED" defaultButton="true" layoutX="94.0" layoutY="278.0" onAction="#LoginCon" prefHeight="69.0" prefWidth="153.0" ripplerFill="WHITE" style="-fx-background-color: #2196f3;" text="Login">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="user_signup" defaultButton="true" layoutX="361.0" layoutY="278.0" onAction="#SignUpcon" prefHeight="69.0" prefWidth="153.0" style="-fx-background-color: #2196f3;" text="Sign Up">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="212.0" layoutY="56.0" prefHeight="36.0" prefWidth="177.0" text="User Login" textFill="#09b6bc">
+               <font>
+                  <Font name="Gill Sans MT" size="28.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="55.0" onAction="#goBack" prefHeight="59.0" prefWidth="145.0" ripplerFill="#111010" style="-fx-background-color: #1e95f1;" text="Home" />
+   </children>
+</AnchorPane>
